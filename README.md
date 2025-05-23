@@ -1,4 +1,4 @@
-# MetaMask SDK + Web3Auth SDK integration
+# MetaMask Web3Auth integration
 
 This project demonstrates the integration of [MetaMask SDK](https://docs.metamask.io/) with [Web3Auth SDK](https://docs.web3auth.io/) in a Next.js application. It provides a seamless wallet connection experience for both desktop and mobile users.
 
