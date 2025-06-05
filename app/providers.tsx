@@ -10,8 +10,6 @@ import {
   AUTH_CONNECTION,
   WEB3AUTH_NETWORK,
 } from "@web3auth/modal";
-// import { MetaMaskSDK } from "@metamask/sdk";
-// import { IEthereum } from "./types/ethereum";
 
 type Props = {
   children: ReactNode;
@@ -20,47 +18,12 @@ type Props = {
 export function Providers({ children }: Props) {
   const [queryClient] = useState(() => new QueryClient());
 
-  // useEffect(() => {
-  //   if (typeof window === "undefined") return;
-
-  //   const MMSDK = new MetaMaskSDK({
-  //     dappMetadata: {
-  //       name: "MetaMask Web3Auth Integration",
-  //       url: window.location.href,
-  //     },
-  //   });
-
-  //   const ethereum = MMSDK.getProvider();
-  //   if (ethereum) {
-  //     window.ethereum = ethereum as unknown as IEthereum;
-  //   }
-  // }, []);
-
   return (
     <Web3AuthProvider
       config={{
         web3AuthOptions: {
           clientId: process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID!, // Replace with your Client ID
           web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_MAINNET,
-          modalConfig: {
-            connectors: {
-              [WALLET_CONNECTORS.AUTH]: {
-                label: "auth",
-                loginMethods: {
-                  sms_passwordless: {
-                    name: "SMS Passwordless",
-                    authConnection: AUTH_CONNECTION.SMS_PASSWORDLESS,
-                    authConnectionId: "w3a-email-passwordless-demo",
-                  },
-                  email_passwordless: {
-                    name: "Email Passwordless",
-                    authConnection: AUTH_CONNECTION.EMAIL_PASSWORDLESS,
-                    authConnectionId: "w3a-sms-passwordless-demo",
-                  },
-                },
-              },
-            },
-          },
         },
       }}
     >
