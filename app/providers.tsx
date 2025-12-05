@@ -5,11 +5,7 @@ import { type ReactNode, useState } from "react";
 
 import { Web3AuthProvider } from "@web3auth/modal/react";
 import { WagmiProvider } from "@web3auth/modal/react/wagmi";
-import {
-  WALLET_CONNECTORS,
-  AUTH_CONNECTION,
-  WEB3AUTH_NETWORK,
-} from "@web3auth/modal";
+import { WEB3AUTH_NETWORK } from "@web3auth/modal";
 
 type Props = {
   children: ReactNode;
