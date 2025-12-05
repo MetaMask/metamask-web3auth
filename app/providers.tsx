@@ -19,7 +19,7 @@ export function Providers({ children }: Props) {
       config={{
         web3AuthOptions: {
           clientId: process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID!, // Replace with your Client ID
-          web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET,
+          web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_MAINNET,
         },
       }}
     >
